@@ -47,6 +47,16 @@ body {
     position: relative;
 }
 
+.tech {
+    height: 200px;
+    width: 10%;
+    margin-bottom: 15px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHyjmoFkkDnYDu3thO9zpfx7n53od0OPyyHw&usqp=CAU);
+    background-size: 15%;
+    background-position: right;
+    position: absolute;
+}
+
 h2 {
     position: absolute;
     top: 90%;
@@ -61,24 +71,42 @@ h2 {
     float: right;
 }
 
-img {
+h4 {
+    position: absolute;
+    top: 90%;
+    left: 90%;
+    width: 100%;
+    background-color: violet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 29px;
+    padding: 5px 5px 5px 5px;
+    background-position: center;
     display: block;
-    margin: 15px;
+    float: left;
+    flex-wrap: wrap;
 }
 
-@media screen and (max-width: 768px) {
-    main,
-    nav,
-    .product {
-      flex-direction: column;
+
+
+/* Cards are split into two columns at 992px or smaller */
+@media screen and (max-width: 992px) {
+    .card {
+      width: 50%;
     }
+    /* Change the header color */
+    header {
+      background: #772014;
+    }
+  }
   
-    .product-slideshow button {
-      /* Removes the slideshow buttons from the document flow */
-      display: none;
+  /* Cards are stacked on top of each other at 768px or smaller */
+  @media screen and (max-width: 768px) {
+    .card {
+      width: 100%;
     }
+    /* Change the header color */
+    header {
+      background: #8ac4ff;
+    }
+  }
   
-    .product-details {
-      margin-left: 0;
-    }
-}
