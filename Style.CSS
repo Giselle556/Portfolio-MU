@@ -44,8 +44,27 @@ body {
     background-image: url(https://www.rover.com/blog/wp-content/uploads/2019/06/three-maine-coons-960x540.jpg);
     background-size: cover;
     background-position: center;
+    position: relative;
 }
-    
+
+h2 {
+    position: absolute;
+    top: 90%;
+    left: 90%;
+    width: 100%;
+    background-color: violet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 29px;
+    padding: 5px 5px 5px 5px;
+    background-position: center;
+    display: block;
+    float: right;
+}
+
+img {
+    display: block;
+    margin: 15px;
+}
 
 @media screen and (max-width: 768px) {
     main,
