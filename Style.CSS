@@ -73,7 +73,9 @@ body {
     background-size: 15%;
     background-position: right;
     position: absolute;
+    
 }
+
 
 h2 {
     position: absolute;
@@ -97,6 +99,24 @@ h3 {
     text-shadow: darkgray;
     list-style: none;
 }
+
+.box {
+    width:80%;
+    min-height:80vh;
+    margin:auto;
+    border:1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* not really needed with auto margin on img*/
+ }
+ .box img {
+    display: block;
+    width: 80%;
+    min-width:100px;
+    max-width: 350px; /*actual image width*/
+    height: auto; /* maintain aspect ratio*/
+    margin: auto; /*optional centering of image*/
+ }
 
 h3 ul li {
     list-style-type: none;
