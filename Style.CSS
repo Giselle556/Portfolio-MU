@@ -5,6 +5,7 @@
 }
 body {
     background-color: lightblue;
+    overflow-x: hidden;
 }
 
 .header {
@@ -51,6 +52,7 @@ body {
     position: relative;
     left:300px;
     top:150px;
+    list-style: none;
 }
 
 .paragraph {
@@ -90,9 +92,18 @@ h2 {
 h3 {
     position: relative;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     color: darkblue;
     text-shadow: darkgray;
+    list-style: none;
+}
+
+h3 ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 25px;
+    text-decoration: underline;
+    float: right;
 }
 
 h4 {
@@ -110,6 +121,30 @@ h4 {
     flex-wrap: wrap;
 }
 
+
+.footer {
+    
+     padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background-color: lightcoral;
+     color:mediumblue;
+     padding-top: 15px;
+    margin-right: 40px;
+
+    font-size: 20px;
+    
+}
+
+
+.footer ul, .footer ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 100px;
+    text-decoration: underline;
+    font-weight: bold;
+    
+    
+}
 
 
 /* Cards are split into two columns at 992px or smaller */
