@@ -6,6 +6,14 @@
 body {
     background-color: lightblue;
     overflow-x: hidden;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+.container {
+    margin: 0px 2.5%;
+    padding-top: 55px;
 }
 
 .header {
@@ -13,10 +21,12 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: lightcoral;
     color:mediumblue;
+    
 }
 
 .header h1 {
-    display: inline;
+    display: inline; 
+    justify-content: space-between;
     font-size: 30px;
     color: whitesmoke;
     background-color: black;
@@ -48,33 +58,15 @@ body {
     position: relative;
 }
 
-.About-Me, .Work, .Contact-Me {
-    position: relative;
-    left:300px;
-    top:150px;
-    list-style: none;
-}
 
 .paragraph {
-    text-decoration: none;
-    display: block;
-    position: relative;
-    width: 800px;
-    left: 600px;
+    flex: 0 0 15%;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.tech {
-    height: 200px;
-    width: 10%;
-    margin-bottom: 15px;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHyjmoFkkDnYDu3thO9zpfx7n53od0OPyyHw&usqp=CAU);
-    background-size: 15%;
-    background-position: right;
-    position: absolute;
     
 }
+ 
+
 
 
 h2 {
@@ -98,25 +90,9 @@ h3 {
     color: darkblue;
     text-shadow: darkgray;
     list-style: none;
+    padding-right: 50px;
 }
 
-.box {
-    width:80%;
-    min-height:80vh;
-    margin:auto;
-    border:1px solid;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* not really needed with auto margin on img*/
- }
- .box img {
-    display: block;
-    width: 80%;
-    min-width:100px;
-    max-width: 350px; /*actual image width*/
-    height: auto; /* maintain aspect ratio*/
-    margin: auto; /*optional centering of image*/
- }
 
 h3 ul li {
     list-style-type: none;
@@ -126,31 +102,38 @@ h3 ul li {
     float: right;
 }
 
-h4 {
-    position: absolute;
-    top: 45%;
-    left: 0%;
-    width: 100%;
-    background-color: violet;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 29px;
-    padding: 5px 5px 5px 5px;
-    background-position: center;
-    display: block;
-    float: left;
+.flexbox-container {
+    display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.flexbox-item {
+    flex: 0 0 35%;
+    border: 5px black;
+    border-radius: 5px 5px;
+    background-image: url(https://wallpaperaccess.com/full/1379504.png) ;
+    background-repeat: none;
+    background-position: center;
+    min-height: 200px;
+    margin: 1%;
+}
+
+.flexbox-item:first-child {
+    min-height: 325px;
+    max-width: 100%;
+    flex-basis: 72%;
+    background-repeat: none;
 }
 
 
-.footer {
-    
-     padding: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-     background-color: lightcoral;
-     color:mediumblue;
-     padding-top: 15px;
-    margin-right: 40px;
 
+.footer {
+    justify-content: center;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     color:mediumblue;
     font-size: 20px;
     
 }
@@ -167,25 +150,54 @@ h4 {
 }
 
 
-/* Cards are split into two columns at 992px or smaller */
+
 @media screen and (max-width: 992px) {
-    .card {
-      width: 50%;
-    }
-    /* Change the header color */
-    header {
-      background: #772014;
-    }
-  }
-  
-  /* Cards are stacked on top of each other at 768px or smaller */
-  @media screen and (max-width: 768px) {
-    .card {
+    .collab body, header, h1 {
       width: 100%;
     }
-    /* Change the header color */
-    header {
-      background: #8ac4ff;
+    
+     content {
+      padding: 5%;
+    }
+    nav ul li {
+        width: 80%;
     }
   }
   
+
+  @media screen and (max-width: 768px) {
+    body, header, h1{
+      width: fit-content;
+      font-size: 25px;
+
+    }
+    /* Change the header color */
+    content, nav {
+      width: 15%;
+    }
+    .footer ul li {
+        padding-right: 5%;
+        font-size: 15px;
+    }
+    h3 {
+        font-size: 29px;
+    }
+  }
+  
+  @media screen and (max-width: 520px) {
+    body, header, h1 {
+      width: fit fit-content;
+      font-size: 30px;
+    }
+    content, nav{
+        width: 10%;
+}
+    .footer ul li {
+      font-size: 15px;
+      padding-right: 15px;
+    }
+
+    h3{
+        font-size: 29px;
+    }
+  }
