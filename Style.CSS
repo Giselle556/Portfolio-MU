@@ -21,6 +21,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: lightcoral;
     color:mediumblue;
+    display: flex;
+    
     
 }
 
@@ -43,8 +45,8 @@ body {
 
 .header nav ul, .header nav ul li {
     list-style-type: none;
-    display: inline-block;
-    margin-left: 25px;
+    display: inline-flex;
+    margin-left: 250px;
     text-decoration: underline;
 }
 
@@ -60,10 +62,13 @@ body {
 
 
 .paragraph {
-    flex: 0 0 15%;
+    flex: 0 0 10%;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     
+}
+.content {
+    display: flex;
 }
  
 
@@ -138,13 +143,16 @@ h3 ul li {
     
 }
 
-
-.footer ul, .footer ul li {
+ .footer ul, .footer ul li {
     list-style-type: none;
-    display: inline-block;
+    justify-content: space-between;
     margin-left: 100px;
     text-decoration: underline;
-    font-weight: bold;
+    font-weight: bold; 
+    display: inline;
+    
+
+;
     
     
 }
@@ -154,6 +162,7 @@ h3 ul li {
 @media screen and (max-width: 992px) {
     .collab body, header, h1 {
       width: 100%;
+      font-size: 35px;
     }
     
      content {
@@ -178,6 +187,7 @@ h3 ul li {
     .footer ul li {
         padding-right: 5%;
         font-size: 15px;
+        
     }
     h3 {
         font-size: 29px;
@@ -192,9 +202,10 @@ h3 ul li {
     content, nav{
         width: 10%;
 }
-    .footer ul li {
-      font-size: 15px;
-      padding-right: 15px;
+    .footer ul, .footer ul li {
+      font-size: 10px;
+      padding-right: 10px;
+      
     }
 
     h3{
