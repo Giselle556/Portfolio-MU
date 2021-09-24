@@ -55,7 +55,7 @@ body {
     height: 400px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url(https://cdn2.scratch.mit.edu/get_image/user/23583914_90x90.png);
+    background-image: url(https://www.incimages.com/uploaded_files/image/1920x1080/getty_907916910_409805.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -119,11 +119,12 @@ h3 ul li {
     flex: 0 0 35%;
     border: 5px black;
     border-radius: 5px 5px;
-    background-image: url(https://wallpaperaccess.com/full/1379504.png) ;
+    background-image: url(https://s3.envato.com/files/226578832/Preview_Image_.jpg) ;
     background-repeat: none;
     background-position: center;
     min-height: 200px;
     margin: 1%;
+    
 }
 
 .flexbox-item:first-child {
